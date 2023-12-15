@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgb(15, 15, 200);
     height: 100%;
   }
   
@@ -27,8 +27,8 @@
     text-align: center;
     margin: 3rem auto;
     border-radius: 8px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(218, 216, 216);
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.9);
   }
   
   #quiz-content {
@@ -38,6 +38,7 @@
   #quiz-start-btn {
     margin-top: 1rem;
     padding: 1rem 2rem;
+    background-color: rgb(15, 15, 200);
   }
   
   #quiz-start-text {
@@ -115,6 +116,7 @@
     bottom: 0;
     width: 100%;
     text-align: center;
+    
   }
   
   .question-review {
