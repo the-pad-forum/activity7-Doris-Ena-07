@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: rgb(116, 116, 247);
+    background-color: #0bdcf7;
     height: 100%;
   }
   
@@ -38,7 +38,7 @@
   #quiz-start-btn {
     margin-top: 1rem;
     padding: 1rem 2rem;
-    background-color: rgb(116, 116, 247);
+    background-color:#0bdcf7;
   }
   
   #quiz-start-text {
@@ -84,7 +84,7 @@
   
   .selected-answer, .selected-answer:active, .selected-answer:hover {
     background-color: #0bdcf7;
-    border: 1px solid #0bdcf7;
+    border: 1px solid rgb(116, 116, 247);
     color: #000;
   }
   
