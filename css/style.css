@@ -9,6 +9,8 @@
     background-color: #007BFF;
     height: 100%;
   }
+
+
   
   div {
     margin: 8px 0;
@@ -39,6 +41,10 @@
     margin-top: 1rem;
     padding: 1rem 2rem;
     background-color:#007BFF;
+  }
+
+  #quiz-start-btn:hover{
+    background-color: #467cb6;
   }
   
   #quiz-start-text {
