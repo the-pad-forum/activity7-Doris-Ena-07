@@ -72,6 +72,10 @@ div {
   background-color: #007bff;
 }
 
+#next-question:hover {
+  background-color: #035cba;
+}
+
 #question { 
   font-size: 1.35rem;
   height: 80px; 
