@@ -1,31 +1,41 @@
+/* General Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #007bff;
   height: 100%;
 }
 
-div {
-  margin: 8px 0;
-}
-
+/* Question Options Styling */
 #options button {
-  margin-right: 8px;
+  color: #000;
+  text-align: left;
+  background-color: rgb(198, 228, 238);
+  font-size: 25px;
+  height: 6.5vh;
+  width: 36.5vw;
+  margin-bottom: 6rem;
 }
 
+#options button:hover{
+  background-color: rgb(118, 174, 233)
+}
+
+/* Quiz Container and its contents Styling */
 #quiz-container {
   zoom: 1;
   width: 80%;
   max-width: 600px;
   min-height: 457.6px;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
-  margin: 3rem auto;
+  margin: 5rem auto;
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -33,6 +43,25 @@ div {
 
 #quiz-content {
   display: none;
+  font-weight: bold;
+}
+
+#quiz-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1px 2px 163px -7px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 1px 2px 163px -7px rgba(0,0,0,0.3);
+  -moz-box-shadow: 1px 2px 163px -7px rgba(0,0,0,0.3);
+  margin-top: -4%; 
+  height: 8vh;
+}
+
+#quiz-title{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  font-size: 30px;
 }
 
 #quiz-start-btn {
@@ -49,52 +78,73 @@ div {
 #quiz-timer {
   font-size: 1rem;
   font-weight: bold;
-  background-color: #eee;
-  border-radius: 4px;
-  padding: 10px;
-  width: 60px;
+  background-color: #000;
+  color: white;
+  border-radius: 5px;
+  width: 40px;
   height: 40px;
-  margin: .5rem auto;
+  margin: -0.2rem;
   display: flex;
+  justify-content: space-around;
+  height: 4vh;
+  padding-top: 0.2rem;
+}
+
+#h1-quiz-timer {
+  display: flex;
+  width: 100vw;
+  background-color: lightblue;
+}
+
+#quiz-timer-container {
+  background-color:  #cce5ff;
+  border-radius: 5px;
+  width: 19vh;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 1.5%;
   justify-content: space-between;
+  font-size: medium;
+  font-weight: bold;
+  margin-right: 5px;
   
 }
 
-#progress { 
-  height: 48px; 
-  padding: 8px; 
+#footer{
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  justify-content: space-between;
+  padding-bottom: -3px;
 }
 
+/* Next Question Button Styling */
 #next-question { 
-  border-radius: 1.8rem;
-  padding: .8rem 2rem;
-  margin-top: 3rem; 
-  background-color: #007bff;
+  border-radius: 0.5rem ;
+  padding: 0.5rem 2rem;
+  margin: 8px 0px 9px; 
+  background-color: #0461c5;
+  border-color: #0866ca;
 }
 
 #next-question:hover {
-  background-color: #035cba;
+  background-color: #3d93f6;
 }
 
+/* Questions Div Styling */
 #question { 
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   height: 80px; 
+  font-weight: bold;
+  margin-top: 1rem;
 }
 
-#options { 
-  height: 125px;
-}
+/* .selected-answer, .selected-answer:active, .selected-answer:hover {
+  color: green;
+} */
 
-#options button {
-  position: relative;
-}
-
-.selected-answer, .selected-answer:active, .selected-answer:hover {
-  background-color: #0bdcf7;
-  border: 1px solid #0bdcf7;
-  color: #000;
-}
-
+/* Simple App Quiz Results Page Styling */
 .tooltip {
   visibility: hidden;
   width: auto;
@@ -115,14 +165,6 @@ div {
 .show-tooltip {
   visibility: visible;
   opacity: 1;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
 }
 
 .question-review {
@@ -196,3 +238,38 @@ div {
   top: 14.8rem;
   left: calc(600px -100vw);
 }
+
+
+/* Progress bar styling */
+#progress { 
+  height: 5vh;
+  border-radius: 15px; 
+  margin-top: 1rem;
+  color: rgb(110, 110, 110);
+}
+
+#progress2 {
+height: 100%;
+background-color: #2a3fe1;
+width: 0%;
+}
+
+#progress-bar {
+ height: 4px; 
+ background-color: rgb(255, 255, 255);
+ position: relative;
+ margin-left: -4%;
+ margin-right: -4%;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.192);
+}
+
+/* Footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
