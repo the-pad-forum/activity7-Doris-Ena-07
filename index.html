@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Simple Quiz App</title>
 </head>
+
 <body>
+  <!-- Quiz Container and its Contents -->
   <div id="quiz-container">
-    <h1 >Simple Quiz App</h1>
+    <h1>Simple Quiz App</h1>
     <button class="btn btn-primary" id="quiz-start-btn">Start Quiz</button>
     <p id="quiz-start-text">
       <b>Time</b>: 5 Minutes,
@@ -21,18 +23,32 @@
       along with options to either retake the quiz or download your results as a PDF report.</p>
 
     <div id="quiz-content">
-      <div id="quiz-timer"></div>
-      <div id="progress"></div>
+      <div id="quiz-header">
+        <h1 id="quiz-title">Simple Quiz App</h1>
+        <div id="quiz-timer-container">Time Left
+          <div id="quiz-timer"></div>
+         </div>
+      </div>
+
+      <!-- Progress,Questions, Options, Next Question -->
+    <div id="progress-bar">
+    <div id="progress2"></div>
+    </div>
 
       <div id="question"></div>
       <div id="options"></div>
       
+      <div id="progress"></div>
       <button id="next-question" class="btn btn-success btn-lg">
-        Next <i class="fas fa-angle-double-right"></i>
+      Next <i class="fas fa-angle-double-right"></i>
       </button>
-
+  <!-- Quiz Container Footer -->
+      <div id="footer"></div>
+      </div>
     </div>
   </div>
+
+  <!-- Footer -->
   <div class="footer">
     © 2023 dorisenak77@gmail.com. All rights reserved
   </div>
