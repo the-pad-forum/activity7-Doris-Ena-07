@@ -309,7 +309,7 @@ function loadQuestion(questionIndex) {
   document.getElementById('next-question').disabled = true;
 
   // Start or reset the timer
-  if (questionIndex < questions.length - 1) {
+  if (questionIndex <questions.length - 1) {
     // startTimer(timeForQuestion, document.getElementById('timer'));
   }
 }
