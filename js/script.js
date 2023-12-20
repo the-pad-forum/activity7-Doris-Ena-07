@@ -287,7 +287,7 @@ function loadQuestion(questionIndex) {
   const progressEl = document.getElementById('progress');
 
   // Update progress
-  progressEl.innerText = `Question ${questionIndex + 1} of ${questions.length}`;
+  progressEl.innerText = `${questionIndex + 1} of ${questions.length} Questions`;
 
   // Set the question text
   questionEl.innerText = questions[questionIndex].question;
@@ -350,6 +350,7 @@ function generatePDF() {
   doc.setFontSize(11); // Decrease font size for final score and date
   doc.text(scoreSummary, 20, (yPos += 7)); // Add score summary
   doc.text(`Date: ${quizDate}`, 75, yPos); // Add date on the same line as score summary
+  doc.text(`Category: Current Affairs`, 135, yPos); //Append Category: Current Affairs as part of the subheading items to the PDF report and set the x-axis position to 135.
   doc.setFontSize(12); // Reset font size to default
   doc.line(20, 31, 190, 31); // Add horizontal line
   doc.text('', 20, (yPos += 10)); // Add empty space after horizontal line
@@ -392,8 +393,10 @@ function generatePDF() {
   yPos += 10; // Adjusted yPos after adding questions
   doc.setFontSize(10); // Decrease font size for visualization
   doc.text('Visualization', 23, yPos + 20, { angle: 90 }); // Add vertical text
+  doc.setFillColor(255,0,0);
+  doc.rect(25 + correctAnswers * 3, yPos, incorrectAnswers * 3, 20, 'FD'); // Bar for incorrect answers
+  doc.setFillColor(0,128,0);
   doc.rect(25, yPos, correctAnswers * 3, 20, 'F'); // Bar for correct answers
-  doc.rect(25 + correctAnswers * 3, yPos, incorrectAnswers * 3, 20); // Bar for incorrect answers
   doc.setFontSize(8);
   doc.text(`Correct [ filled ]: ${correctAnswers}`, 25, (yPos += 24));
   doc.text(`Incorrect [ no fill ]: ${incorrectAnswers}`, 55, (yPos));
@@ -431,15 +434,23 @@ document.getElementById('next-question').addEventListener('click', () => {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     loadQuestion(currentQuestionIndex);
+    updateProgressBar();
   } else {
     // Handle end of quiz, such as displaying results
   }
 });
 
+  // Add function which updates the progress bar
+  function updateProgressBar() {
+    const progressPercentage = (currentQuestionIndex / questions.length) * 100;
+    document.getElementById('progress2').style.width = progressPercentage + '%';
+  }
+
 document
   .getElementById('quiz-start-btn')
   .addEventListener('click', function () {
     startQuizTimer(); // Start the timer when the quiz starts
+    document.querySelector('#quiz-container h1').style.display='none' //hide initial h1 heading
     document.getElementById('quiz-content').style.display = 'block'; // Show the quiz
     document.getElementById('quiz-start-text').style.display = 'none'; // Hide the start text
     loadQuestion(0); // Load the first question
@@ -454,3 +465,21 @@ document
  * -----------------------------------------------------------------------------
 */
 loadQuestion(0);
+
+
+
+
+
+// Create a new i element
+// var iconElement = document.createElement('i');
+
+// Add classes to the element
+// iconElement.classList.add('fa', 'fa-check-circle-o');
+
+// Set the 'aria-hidden' attribute
+// iconElement.setAttribute('aria-hidden', 'true');
+
+// Append the element to the document or a specific container
+// document.body.appendChild(iconElement);
+
+
