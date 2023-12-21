@@ -19,8 +19,7 @@ body {
   background-color: rgb(198, 228, 238);
   font-size: 25px;
   height: 6.5vh;
-  width: 36.5vw;
-  margin-bottom: 6rem;
+  width: 100%;
 }
 
 #options button:hover{
@@ -115,7 +114,7 @@ body {
   display: flex;
   align-items: center;
   border-top: 1px solid #ddd;
-  /* justify-content: space-between; */
+  justify-content: space-between;
 }
 
 /* Next Question Button Styling */
