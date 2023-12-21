@@ -251,6 +251,18 @@ function handleOptionSelect(selectedOption, button) {
     document.getElementById('next-question').disabled = false;
   }
 
+  // Remove check icon from all buttons
+  options.forEach((opt) => {
+    if(opt.contains(opt.querySelector('i'))) {
+      opt.removeChild(opt.querySelector('i'));
+    }
+  });
+
+  // Add check mark icon to clicked button
+  let icon = document.createElement('i');
+  icon.classList.add('fas', 'fa-check-circle');
+  button.appendChild(icon);
+
   // Provide visual feedback for selection (optional)
   // For example, change the color of the selected button
 }
