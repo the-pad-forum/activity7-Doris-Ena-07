@@ -241,6 +241,7 @@ body {
   border-radius: 15px; 
   margin-top: 1rem;
   color: rgb(110, 110, 110);
+  display: flex;
 }
 
 #progress2 {
