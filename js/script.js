@@ -290,7 +290,7 @@ function loadQuestion(questionIndex) {
   progressEl.innerText = `${questionIndex + 1} of ${questions.length} Questions`;
 
   // Set the question text
-  questionEl.innerText = questions[questionIndex].question;
+  questionEl.innerText = `${questionIndex + 1}. ${questions[questionIndex].question}`
 
   // Clear previous options
   optionsEl.innerHTML = '';
