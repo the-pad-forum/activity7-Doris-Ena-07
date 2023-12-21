@@ -138,12 +138,12 @@ body {
 
 /* Questions Div Styling */
 #question { 
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   height: 80px; 
   font-weight: bold;
-  margin: 1rem 1rem -1rem;
+  margin: 1rem 1.4rem -1rem;
   text-align: left;
-  text-indent: -20px
+  text-indent: -1.4rem;
 }
 
 
